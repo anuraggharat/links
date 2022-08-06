@@ -22,7 +22,7 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 10rem;
+    padding: 2rem;
     align-items: center;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
@@ -52,7 +52,7 @@ main{
     flex-direction: row;
     padding: 1rem;
     width: 100%;
-    justify-content: center;
+    justify-content: space-evenly;
 }
 a{
     text-decoration: none;
@@ -61,7 +61,7 @@ a{
     font-weight: 400px;
 }
 i{
-    font-size: 1.2rem;
+    font-size: 1.4rem;
 }
 .btn{
     border: 1px solid #fff;
