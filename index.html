@@ -14,7 +14,12 @@
     <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
-<body>
+<body id="body">
+    <div class="theme-toggler">
+        <button class="switch" onclick="switchMode()">
+            <i class="ri-moon-line" id="switch"></i>
+        </button>
+    </div>
     <main>
         <div class="row">
             <img src="./anurag-gharat.jpg" alt="">
@@ -44,7 +49,7 @@
             </div>
             <div class="card">
                 <a href="http://" target="_blank" rel="noopener noreferrer">
-                    <i class="ri-youtube-line"></i>
+                    <i class="ri-instagram-line"></i>
                 </a>
                 YouTube
             </div>
@@ -72,5 +77,20 @@
 </body>
 </html>
 <script>
-    
+     var body = document.getElementById('body')
+        var switchbtn = document.getElementById('switch')
+        var currentMode = 'light'
+        function switchMode() {
+            body.classList.toggle('dark')
+            if (currentMode === 'light') {
+                switchbtn.classList.remove('ri-moon-line')
+                switchbtn.classList.add('ri-sun-line')
+                currentMode = 'dark'
+            } else {
+                switchbtn.classList.remove('ri-sun-line')
+                switchbtn.classList.add('ri-moon-line')
+                currentMode = 'light'
+            }
+
+        }
 </script>
