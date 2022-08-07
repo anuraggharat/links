@@ -22,14 +22,17 @@ body{
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    padding: 2rem;
+    padding: 1rem;
     align-items: center;
     background-image: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
     color: #fff;
 }
 h1{
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 5px;
+}
+p{
+   font-weight: 400; 
 }
 img{
     height: 100px;
@@ -39,7 +42,7 @@ main{
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 468px;
+    width: 40%;
 }
 .col{
     display: flex;
@@ -50,9 +53,9 @@ main{
 .row{
     display: flex;
     flex-direction: row;
-    padding: 1rem;
+    padding: 2rem;
     width: 100%;
-    justify-content: space-evenly;
+    justify-content: space-around;
 }
 a{
     text-decoration: none;
@@ -60,8 +63,13 @@ a{
     font-size: 1rem;
     font-weight: 400px;
 }
-i{
-    font-size: 1.4rem;
+.row>a{
+    font-size:1.5rem;
+    font-weight: 200;
+    transition: all 0.3s ease 0s;
+}
+.row>a:hover{
+    transform: translateY(-7px);
 }
 .btn{
     border: 1px solid #fff;
@@ -69,4 +77,20 @@ i{
     padding: 1rem;
     text-align: center;
     margin: .5rem;
+    transition: all 0.3s ease 0s;
+}
+.btn:hover{
+    background-color: #fff;
+    color: #667eea;
+    transform: translateY(-7px);
+}
+@media screen and (max-width: 600px) {
+main {
+    width: 90%;
+}
+h1{
+    font-size: 24px;
+}
+
+        
 }
