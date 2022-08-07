@@ -17,7 +17,7 @@
 
 <body id="body">
     <div class="theme-toggler">
-        <button class="switch" onclick="switchMode()">
+        <button class="switch" id="btn" onclick="switchMode()">
             <i class="ri-moon-line" id="switch"></i>
         </button>
     </div>
@@ -80,16 +80,21 @@
 <script>
      var body = document.getElementById('body')
         var switchbtn = document.getElementById('switch')
+        var btn = document.getElementById('btn')
+        
         var currentMode = 'light'
         function switchMode() {
             body.classList.toggle('dark')
             if (currentMode === 'light') {
                 switchbtn.classList.remove('ri-moon-line')
                 switchbtn.classList.add('ri-sun-line')
+                btn.classList.add('end')
                 currentMode = 'dark'
             } else {
                 switchbtn.classList.remove('ri-sun-line')
                 switchbtn.classList.add('ri-moon-line')
+                btn.classList.remove('end')
+
                 currentMode = 'light'
             }
 
