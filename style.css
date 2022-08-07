@@ -14,7 +14,8 @@
     padding: 0px;
     margin: 0px;
     scroll-behavior: smooth;
-    font-family: 'Noto Sans', sans-serif;
+    font-family: 'Poppins', sans-serif;
+    transition: all 0.2s ease 0s;
 }
 body{
     min-height: 100vh;
@@ -22,7 +23,7 @@ body{
     display: flex;
     padding: 1rem;
     flex-direction: column;
-    justify-content: flex-start;
+    justify-content: center;
     align-items: center;
     background-color:#f2f4fb ;
     color: #333;
@@ -47,6 +48,9 @@ p{
     font-size: 14px;
     color: #222;
 }
+.dark p{
+    color: #e6e6e6;
+}
 img{
     height: 100px;
     border-radius: 50%;
@@ -67,6 +71,7 @@ main{
     display: flex;
     flex-direction: row;
     padding: 1rem;
+    margin:.5rem 0;
     width: 100%;
     justify-content: space-evenly;
 }
@@ -90,8 +95,12 @@ a{
     align-items: center;
     margin-bottom: 5px;
 }
-i{
+.card > a{
     font-size: 1.5rem;
+}
+.card > a:hover{
+    box-shadow: 0px 15px 20px rgba(36, 36, 36, 0.4);
+    transform: translateY(-7px);
 }
 .btn{
     width: 100%;
@@ -102,11 +111,10 @@ i{
     color: #222;
     border-radius: 5px;
     transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 .btn:hover {
-    background-color: var(--accent-dark);
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
-    color: #fff;
+    box-shadow: 0px 15px 20px rgba(36, 36, 36, 0.2);
     transform: translateY(-7px);
 }
 
@@ -117,20 +125,22 @@ button{
     border: none;
     background: none;
     position: fixed;
-    top: 2%;
+    top: 5%;
     right: 5%;
-    background-color: #fff;
-    padding: 1rem;
+    background-color:#fff ;
+    color: dodgerblue;
+    padding: .7rem;
     border-radius: 50%;
+    font-size: 1.2rem;
     display: flex;
     flex-direction: column;
     align-items: center;
-    margin-bottom: 5px;
     transition: all 0.3s ease 0s;
+    cursor: pointer;
 }
 .dark button{
     background-color: #222;
-    color: #fff;
+    color: #fdcb6e;
 }
 @media screen and (max-width: 600px) {
 body {
